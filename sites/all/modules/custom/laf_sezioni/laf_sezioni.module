@@ -1,0 +1,67 @@
+<?php
+function laf_sezioni_menu() {
+	$items['works'] = array(
+		'title'            => 'Works',
+		'page callback'    => 'laf_section',
+		'access arguments' => array( 'access content' ),
+		'type'             => MENU_NORMAL_ITEM,
+	);
+
+	/*$items['engine'] = array(
+		'title'            => 'Metodo',
+		'page callback'    => 'laf_section',
+		'access arguments' => array( 'access content' ),
+		'type'             => MENU_NORMAL_ITEM,
+	);*/
+
+	$items['network'] = array(
+		'title'            => 'Network',
+		'page callback'    => 'laf_section',
+		'access arguments' => array( 'access content' ),
+		'type'             => MENU_NORMAL_ITEM,
+	);
+
+	$items['promessa'] = array(
+		'title'            => 'Promessa',
+		'page callback'    => 'laf_section',
+		'access arguments' => array( 'access content' ),
+		'type'             => MENU_NORMAL_ITEM,
+	);
+
+	$items['contact'] = array(
+		'title'            => 'Contact',
+		'page callback'    => 'laf_section',
+		'access arguments' => array( 'access content' ),
+		'type'             => MENU_NORMAL_ITEM,
+	);
+	$items['redirect'] = array(
+		'title'            => 'Redirect',
+		'page callback'    => 'laf_redirect',
+		'access arguments' => array( 'access content' ),
+		'type'             => MENU_CALLBACK,
+	);
+	return $items;
+}
+
+function laf_redirect() {
+	unset($_GET['destination']);
+	drupal_goto();
+}
+
+function laf_section() {
+	return theme('laf');
+}
+
+function laf_theme($existing, $type, $theme, $path) {
+	return array(
+		'laf' => array(),
+	);
+}
+
+/* DISABLE DESCRIPTION FIELD IN TAXONOMY ENTITY */
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function laf_sezioni_form_taxonomy_form_term_alter(&$form, &$form_state) {
+	$form['description']['#access'] = FALSE;
+}

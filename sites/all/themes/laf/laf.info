@@ -1,0 +1,13 @@
+name = LAF
+description = Tema per il sito de LaFabbrica basato sul tema Framework.
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = assets/css/style.min.css
+stylesheets[all][] = laf.css
+
+scripts[] = assets/js/modernizr.js
+
+regions[header]         = Header
+regions[navigation]     = Navigation
+regions[content]        = Content

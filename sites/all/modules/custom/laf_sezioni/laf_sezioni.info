@@ -1,0 +1,5 @@
+name = Laf Sezioni
+description = Modulo per la gestione delle sezioni del sito
+package = Laf
+core = 7.x
+files[] = laf_sezioni.module
