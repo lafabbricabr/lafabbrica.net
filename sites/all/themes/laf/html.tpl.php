@@ -56,22 +56,40 @@
 	var coord = {
 		<?php if( isset($sediList) && is_array($sediList) ): ?>
 		officeDefault : {
-			value : 'coord.office.<?php echo strtolower(str_replace(' ' , '_' , $sediList[0]->field_nazione['und'][0]['value'])); ?>'
+			value :
+				<?php if(isset($sediList[0]->field_nazione['und']) && isset($sediList[0]->field_nazione['und'][0]['value'])){
+
+					?>
+					'coord.office.<?php echo strtolower(str_replace(' ' , '_' , $sediList[0]->field_nazione['und'][0]['value'])); ?>'
+
+				<?php } else { ?>
+					''
+				<?php } ?>
+
+
 		},
 		networkDefault : {
-			value : 'coord.office.<?php echo strtolower(str_replace(' ' , '_' , $sediList[0]->field_nazione['und'][0]['value']) ); ?>.link'
+			value :
+				<?php if(isset($sediList[0]->field_nazione['und']) && isset($sediList[0]->field_nazione['und'][0]['value'])){ ?>
+				'coord.office.<?php echo strtolower(str_replace(' ' , '_' , $sediList[0]->field_nazione['und'][0]['value']) ); ?>.link'
+				<?php } else { ?>
+					''
+				<?php } ?>
 		},
 		<?php endif; ?>
 
 		<?php if( isset($sediList) && is_array($sediList) ): ?>
 		office : {
-			<?php foreach($sediList as $sede): ?>
-			<?php echo strtolower( str_replace(' ' , '_' , $sede->field_nazione['und'][0]['value']) ); ?> : {
-				link: 'office.<?php echo strtolower( str_replace(' ' , '_' , $sede->field_nazione['und'][0]['value']) ); ?>',
-				lat : <?php echo $sede->field_geolocalizzazione['und'][0]['lat']; ?>,
-				lng : <?php echo $sede->field_geolocalizzazione['und'][0]['lng']; ?>
-			},
-			<?php endforeach; ?>
+			<?php foreach($sediList as $sede):
+				if (isset($sede->field_nazione['und'][0]['value'])) {
+			?>
+				<?php echo strtolower( str_replace(' ' , '_' , $sede->field_nazione['und'][0]['value']) ); ?> : {
+					link: 'office.<?php echo strtolower( str_replace(' ' , '_' , $sede->field_nazione['und'][0]['value']) ); ?>',
+					lat :
+						<?php echo isset($sede->field_geolocalizzazione['und'][0]['lat']) ? $sede->field_geolocalizzazione['und'][0]['lat'] : 0.0; ?>,
+					lng : <?php echo isset($sede->field_geolocalizzazione['und'][0]['lng']) ? $sede->field_geolocalizzazione['und'][0]['lng'] : 0.0; ?>
+				},
+			<?php } endforeach; ?>
 
 		},
 		<?php endif; ?>
@@ -79,12 +97,15 @@
 		<?php if( isset($networkList) && is_array($networkList) ): ?>
 		network : {
 			<?php foreach($networkList as $network): ?>
-			<?php echo strtolower( str_replace( ' ' , '_' , $network->name) ); ?> : {
+			<?php
+				if (isset($network->name)) {
+
+				echo strtolower( str_replace( ' ' , '_' , $network->name) ); ?> : {
 				link: 'network.<?php echo strtolower( str_replace( ' ' , '_' , $network->name) ); ?>',
-				lat : <?php echo $network->field_geolocalizzazione['und'][0]['lat']; ?>,
-				lng : <?php echo $network->field_geolocalizzazione['und'][0]['lng']; ?>
+				lat : <?php echo isset($network->field_geolocalizzazione['und'][0]['lat']) ? $network->field_geolocalizzazione['und'][0]['lat'] : 0.0; ?>,
+				lng : <?php echo isset($network->field_geolocalizzazione['und'][0]['lng']) ? $network->field_geolocalizzazione['und'][0]['lng'] : 0.0; ?>
 			},
-			<?php endforeach; ?>
+			<?php } endforeach; ?>
 		}
 		<?php endif; ?>
 	};
