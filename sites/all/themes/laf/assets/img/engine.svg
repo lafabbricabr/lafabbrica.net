@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="399.732px" height="322.266px" viewBox="0 0 399.732 322.266" enable-background="new 0 0 399.732 322.266"
+	 xml:space="preserve">
+<g id="carburante">
+	<g>
+		<ellipse fill="none" stroke="#555555" stroke-miterlimit="10" cx="320.532" cy="105.467" rx="79.2" ry="78"/>
+		
+			<ellipse fill="none" stroke="#555555" stroke-width="0.5" stroke-miterlimit="10" cx="320.532" cy="105.467" rx="22.935" ry="22.533"/>
+		<g>
+			
+				<ellipse fill="none" stroke="#555555" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="6.0262,6.0262" cx="320.532" cy="105.467" rx="65.467" ry="64.4"/>
+		</g>
+		<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="325.466,93.067 333.6,91.867 332.933,100.133 
+			339.466,105.2 333.067,110.4 334.132,118.533 325.866,117.867 320.933,124.4 315.6,118.133 307.466,119.067 308.267,110.799 
+			301.733,105.867 307.999,100.667 306.933,92.4 315.199,93.2 320.132,86.667 		"/>
+	</g>
+</g>
+<g id="database">
+	<g>
+		
+			<ellipse fill="none" stroke="#555555" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="6.0262,6.0262" cx="230.132" cy="178.667" rx="65.468" ry="64.4"/>
+	</g>
+	<ellipse fill="none" stroke="#555555" stroke-miterlimit="10" cx="230.132" cy="178.667" rx="45.866" ry="45.2"/>
+	
+		<ellipse fill="none" stroke="#555555" stroke-width="0.5" stroke-miterlimit="10" cx="230.132" cy="178.667" rx="22.399" ry="22.134"/>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="191.067,201.2 230.132,133.6 269.199,201.2 	"/>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="244.533,169.467 230.132,194.4 215.733,169.467 	"/>
+</g>
+<g id="energia">
+	<g>
+		
+			<ellipse fill="none" stroke="#555555" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="6.0262,6.0262" cx="293.199" cy="212.534" rx="65.467" ry="64.4"/>
+	</g>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="271.067,228.667 266.132,208.133 277.067,190.4 297.6,185.6 
+		315.333,196.533 320.267,216.934 309.333,234.667 288.8,239.6 	"/>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="281.999,219.733 293.199,200.4 304.4,219.733 	"/>
+</g>
+<g id="motoperpetuo">
+	<g>
+		
+			<ellipse fill="none" stroke="#555555" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="6.0262,6.0262" cx="129.6" cy="179.333" rx="65.467" ry="64.399"/>
+	</g>
+	<ellipse fill="none" stroke="#555555" stroke-width="0.5" stroke-miterlimit="10" cx="129.6" cy="179.334" rx="37.2" ry="36.533"/>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="143.999,169.067 129.6,194 115.067,169.067 	"/>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="84.666,214.934 72.933,172.266 94.533,134.266 136.8,122.4 
+		174.933,143.867 185.866,185.867 164.666,223.868 122.533,236.266 	"/>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="138.666,130.533 151.199,146.133 170.533,151.334 
+		168.4,171.2 178.4,188.4 162.933,200.934 157.733,220.133 137.866,218.266 120.533,228.133 107.999,212.667 88.666,207.467 
+		90.8,187.6 80.8,170.266 96.4,157.734 101.466,138.4 121.333,140.4 	"/>
+</g>
+<g id="prontofab">
+	<g>
+		<g>
+			
+				<ellipse fill="none" stroke="#555555" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="6.0262,6.0262" cx="209.067" cy="88.667" rx="65.466" ry="64.4"/>
+		</g>
+		<ellipse fill="none" stroke="#555555" stroke-miterlimit="10" cx="209.067" cy="88.667" rx="33.733" ry="33.333"/>
+		<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="194.933,101.467 190.8,82.934 204.933,70.267 223.067,76 
+			227.067,94.4 213.199,107.2 		"/>
+	</g>
+</g>
+<g id="circle">
+	
+		<ellipse fill="none" stroke="#555555" stroke-width="0.5" stroke-miterlimit="10" stroke-dasharray="6.0262,6.0262" cx="194.4" cy="257.867" rx="65.467" ry="64.399"/>
+	<ellipse fill="none" stroke="#555555" stroke-miterlimit="10" cx="45.866" cy="128.134" rx="45.866" ry="45.2"/>
+</g>
+<g id="star">
+	<circle fill="none" stroke="#555555" stroke-miterlimit="10" cx="131.199" cy="61.2" r="3.2"/>
+	<circle fill="none" stroke="#555555" stroke-miterlimit="10" cx="112.8" cy="3.2" r="3.2"/>
+	<circle fill="none" stroke="#555555" stroke-miterlimit="10" cx="60.933" cy="58" r="3.2"/>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="153.999,42 157.333,36.267 160.666,42 	"/>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="46.4,212.667 45.466,206.133 51.6,208.533 	"/>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="377.333,186.133 376.8,179.6 382.8,182.4 	"/>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="100.533,106.934 106.8,104.934 105.333,111.334 	"/>
+	<polygon fill="none" stroke="#555555" stroke-miterlimit="10" points="212.267,282 215.6,276.266 218.933,282 	"/>
+	<circle fill="none" stroke="#555555" stroke-miterlimit="10" cx="76.133" cy="228.134" r="3.2"/>
+	<circle fill="none" stroke="#555555" stroke-miterlimit="10" cx="67.466" cy="273.067" r="3.199"/>
+	<circle fill="none" stroke="#555555" stroke-miterlimit="10" cx="262.532" cy="237.2" r="3.199"/>
+	<circle fill="none" stroke="#555555" stroke-miterlimit="10" cx="198.8" cy="184.8" r="3.2"/>
+	<circle fill="none" stroke="#555555" stroke-miterlimit="10" cx="352.933" cy="67.333" r="3.2"/>
+	<circle fill="none" stroke="#555555" stroke-miterlimit="10" cx="258.267" cy="25.2" r="3.2"/>
+	<circle fill="none" stroke="#555555" stroke-miterlimit="10" cx="336.267" cy="294.933" r="3.2"/>
+</g>
+</svg>

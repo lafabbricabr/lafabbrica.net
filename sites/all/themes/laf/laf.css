@@ -1,0 +1,12 @@
+.messages {
+    position: relative;
+    z-index: 9999;
+}
+
+/* PAGE USER */
+.page-user { font-size: 14px; }
+.page-user #header { background-color: #15a546; text-align: center; padding: 15px 0 10px; }
+.page-user #main { width: 600px; margin: 50px auto; padding: 25px; border: 1px solid #15a546; border-radius: 2px; }
+.page-user #main .title { color:#15a546; text-transform: uppercase; font-weight: 400; }
+.page-user #main .form-text { border: 1px solid #15a546; height: 30px; width: 60%; margin: 5px 0; padding-left: 5px; font-size: 14px; border-radius: 2px; }
+.page-user #main .form-submit { border: 1px solid #15a546; padding: 10px; background-color: #FFFFFF; text-transform: uppercase; border-radius: 2px; font-weight: bold; }

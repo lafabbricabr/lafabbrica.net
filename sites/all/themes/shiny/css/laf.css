@@ -1,0 +1,7 @@
+.field-type-file .image-widget .field-name-field-titolo-image { display: none; }
+.field-type-file .image-widget .field-name-field-description-image { display: none; }
+.field-type-image .image-widget .field-name-field-titolo-image { display: none; }
+.field-type-image .image-widget .field-name-field-description-image { display: none; }
+
+.field-name-field-product-gallery.field-type-file .image-widget .field-name-field-titolo-image { display: block; }
+.field-name-field-product-gallery.field-type-file .image-widget .field-name-field-description-image { display: block; }
