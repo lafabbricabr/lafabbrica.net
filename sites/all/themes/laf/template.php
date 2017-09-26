@@ -143,7 +143,7 @@ function laf_preprocess_page(&$variables) {
 	if( $language->language == 'it' ):
 		$variables['noteLegaliId'] = 7;
 		$variables['cookiesId'] = 43;
-	elseif( $language->language == 'en' ):
+	else:
 		$variables['noteLegaliId'] = 15;
 		$variables['cookiesId'] = 44;
 	endif;
