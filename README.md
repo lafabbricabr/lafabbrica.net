@@ -69,3 +69,61 @@ $databases = array (
 );
 
 ```
+
+5- Ative as urls limpas
+
+5.1 - Habilite o módulo rewrite do apache;
+
+```
+# a2enmod rewrite
+```
+
+5.2 Edite o arquivo /etc/apache2/sites-available/default para habilitar a reescrita de URLs.
+
+```
+nano /etc/apache2/sites-available/default ou .conf
+```
+
+Procure a linha Directory usando Ctrl+W. Acrescente logo após allow from all as seguintes linhas, conforme abaixo:
+
+```
+ <Directory /var/www/>
+  Options Indexes FollowSymLinks MultiViews
+  AllowOverride None
+  Order allow,deny
+  allow from all
+
+  RewriteEngine on
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+ </Directory>
+```
+
+5.3 - Reinicie o apache com o comando
+```
+ /etc/init.d/apache2 restart
+ ```
+ou
+
+```
+# service apache2 restart
+```
+
+6 - Rode o updates.php
+
+6.1 logue no painel do site
+6.2 acesse pela url drupal7.dev/update.php
+
+7 - Instale o php-xml
+
+```
+apt-get install php7.0-xml
+```
+
+8 - Instale o php-mbstring
+
+apt-get install php-mbstring
+
+
