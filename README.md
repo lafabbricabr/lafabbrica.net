@@ -11,9 +11,14 @@
 ### Server Requirements
 
 * Debian 9 or Ubuntu 16.04
+* Vagrant and vagrant-hostsupdater plugin
+* VDD GR https://github.com/griddick/vdd_gr
 
 ```
-# apt-get install mysql-server
+# apt-get install -y mysql-server
+# apt-get instal -y apache2
+# apt-get install php
+# apt-get install php-xml
 
 ```
 ### Steps
@@ -33,7 +38,7 @@ mysql>  GRANT ALL PRIVILEGES ON *.* TO 'lafabbrica'@'localhost' WITH GRANT OPTIO
 2. login with new user and create the new database
 
 ```
-$ mysql -u root -p
+$ mysql -u lafabbrica -p
 $ Enter password: xxx
 mysql> CREATE DATABASE lafabbrica;
 ```

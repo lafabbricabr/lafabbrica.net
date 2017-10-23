@@ -78,6 +78,14 @@ function laf_preprocess_html(&$variables) {
 	$sedi = i18n_taxonomy_get_tree($sediVid,$language->language,0,null,true);
 	$variables['sediList'] = $sedi;
 
+	// echo '<br><br><br><br><h1>testeee</h1>';
+	// echo $sediVid;
+	// echo '<br>';
+	// echo $language->language;
+	// echo '<br><!-- ';
+	// echo json_encode($language);
+	// echo ' --><br>';
+
 	/* Cerca i network */
 	$networkVid = 4;
 	$network = i18n_taxonomy_get_tree($networkVid,$language->language,0,null,true);
@@ -133,9 +141,9 @@ function laf_preprocess_page(&$variables) {
 
 	/* Cerca pagina Note Legali */
 	if( $language->language == 'it' ):
-	$variables['noteLegaliId'] = 7;
-	$variables['cookiesId'] = 43;
-	elseif( $language->language == 'en' ):
+		$variables['noteLegaliId'] = 7;
+		$variables['cookiesId'] = 43;
+	else:
 		$variables['noteLegaliId'] = 15;
 		$variables['cookiesId'] = 44;
 	endif;
@@ -183,6 +191,9 @@ function laf_preprocess_page(&$variables) {
 	/* Cerca le sedi */
 	$sediVid = 3;
 	$sedi = i18n_taxonomy_get_tree($sediVid,$language->language,0,null,true);
+	// echo json_encode(i18n_taxonomy_get_tree($sediVid,$language->language,0,null,true));
+	// echo json_encode($sedi);
+
 	$variables['sediList'] = $sedi;
 
 	// HOMEPAGE
@@ -190,11 +201,12 @@ function laf_preprocess_page(&$variables) {
 		$variables['fabText'] = 'Home';
 
 		/* Cerca testi */
+		// echo "<p>AQUIIII 1</p>";
 		$result  = db_query( "
-		SELECT n.nid FROM {node} n
-		WHERE n.status = :status
-		AND n.type = :type
-		AND n.language = :language",
+			SELECT n.nid FROM {node} n
+			WHERE n.status = :status
+			AND n.type = :type
+			AND n.language = :language",
 			array(
 				":status" => '1',
 				":type"   => "home_page",
@@ -202,8 +214,17 @@ function laf_preprocess_page(&$variables) {
 			)
 		);
 		$homepage_id = $result->fetchAll();
+		// echo "<p>AQUIIII 2</p>";
+		// echo $language->language;
+		// echo "<p>";
+		// echo json_encode($homepage_id);
+		// echo "</p>";
+
 		foreach($homepage_id as $node) {
+			// echo '<p> --- ';
 			$homePage = node_load( $node->nid );
+			// echo $node->nid;
+			// echo '<p>';
 		}
 		if( isset( $homePage ) ):
 			$variables['homePage'] = $homePage;
