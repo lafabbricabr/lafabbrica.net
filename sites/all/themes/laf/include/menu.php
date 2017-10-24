@@ -88,7 +88,6 @@
 					<?php endif; ?>
 					<?php if( isset($promessa->field_ispirare_testo['und']) ): ?>
 						<p><?php echo $promessa->field_ispirare_testo['und'][0]['value']; ?><br />
-							<a href="<?php echo url('works'); ?>"><?php echo t('Would you like some examples? Discover our projects'); ?></a>
 						</p>
 						<div class="exclamation-mark"></div>
 					<?php endif; ?>
@@ -98,7 +97,6 @@
 					<?php endif; ?>
 					<?php if( isset($promessa->field_engagement_testo['und']) ): ?>
 						<p><?php echo $promessa->field_engagement_testo['und'][0]['value']; ?><br />
-							<a href="<?php echo url('engine'); ?>"><?php echo t('Do you want to know how it works? Discover our Engine'); ?></a>
 						</p>
 						<div class="star"></div>
 					<?php endif; ?>
