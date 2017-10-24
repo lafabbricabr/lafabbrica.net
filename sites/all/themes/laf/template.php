@@ -140,13 +140,35 @@ function laf_preprocess_page(&$variables) {
 	$pagePath = explode('/' , drupal_lookup_path('alias',current_path()));
 
 	/* Cerca pagina Note Legali */
-	if( $language->language == 'it' ):
-		$variables['noteLegaliId'] = 7;
-		$variables['cookiesId'] = 43;
-	else:
-		$variables['noteLegaliId'] = 15;
-		$variables['cookiesId'] = 44;
-	endif;
+	$result  = db_query( "
+		SELECT n.nid FROM {node} n
+		WHERE n.status = :status
+		AND n.type = :type
+		AND n.language = :language",
+		array(
+			":status" => '1',
+			":type"   => "terms_of_use",
+			":language"   => $language->language
+		)
+	);
+
+	$noteLegaliId = $result->fetchField();
+	$variables['noteLegaliId'] = $noteLegaliId ? $noteLegaliId : 15;
+
+	$result  = db_query( "
+		SELECT n.nid FROM {node} n
+		WHERE n.status = :status
+		AND n.type = :type
+		AND n.language = :language",
+		array(
+			":status" => '1',
+			":type"   => "cookies_text",
+			":language"   => $language->language
+		)
+	);
+
+	$cookiesId = $result->fetchField();
+	$variables['cookiesId'] = $cookiesId ? $cookiesId : 44;
 
 	/* Cerca promessa */
 	$result  = db_query( "
