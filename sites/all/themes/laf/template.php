@@ -220,7 +220,7 @@ function laf_preprocess_page(&$variables) {
 
 	// HOMEPAGE
 	if( drupal_is_front_page()) {
-		$variables['fabText'] = 'Home';
+		$variables['fabText'] = t('Home');
 
 		/* Cerca testi */
 		// echo "<p>AQUIIII 1</p>";
@@ -294,17 +294,8 @@ function laf_preprocess_page(&$variables) {
 
 	// WORKS
 	if(arg(0) == 'works') {
-		switch($language->language) {
-			case 'it':
-				$variables['fabText'] = 'Progetti';
-				break;
-			case 'en':
-				$variables['fabText'] = 'Works';
-				break;
-			default:
-				$variables['fabText'] = 'Works';
-		}
 
+		$variables['fabText'] = t('Works');
 
 		/* Cerca i works */
 		$result  = db_query( "
@@ -337,37 +328,19 @@ function laf_preprocess_page(&$variables) {
 
 	// CASE
 	if( $pagePath[0] == 'works' && arg(0) == 'node' ) {
-		switch($language->language) {
-			case 'it':
-				$variables['fabText'] = 'Case Study';
-				break;
-			case 'en':
-				$variables['fabText'] = 'Case Study';
-				break;
-			default:
-				$variables['fabText'] = 'Case Study';
-		}
+		$variables['fabText'] = t('Case Study');
 		$variables['backToWorks'] = true;
 	}
 
 	// ENGINE
 	if($pagePath[0] == 'engine') {
-		/*switch($language->language) {
-			case 'it':
-				$variables['fabText'] = 'Engine';
-				break;
-			case 'en':
-				$variables['fabText'] = 'Engine';
-				break;
-			default:
-				$variables['fabText'] = 'Engine';
-		}*/
+		$variables['fabText'] = t('Engine');
 		$variables['isEngine'] = true;
 	}
 
 	// GLOBAL BUSINESS
 	if(arg(0) == 'network') {
-		$variables['fabText'] = 'Network';
+		$variables['fabText'] = t('Network');
 
 		/* Cerca i network */
 		$networkVid = 4;
