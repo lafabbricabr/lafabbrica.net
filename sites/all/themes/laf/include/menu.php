@@ -130,7 +130,7 @@
 									echo  $sede->field_indirizzo_2['und'][0]['value'] . "<br>";
 								endif; ?>
 								<?php echo $sede->field_telefono['und'][0]['value']; ?><br />
-								<a href="mailto:<?php echo $sede->field_email['und'][0]['email']; ?>t"><?php echo $sede->field_email['und'][0]['email']; ?></a>
+								<a href="mailto:<?php echo $sede->field_email['und'][0]['email']; ?>"><?php echo $sede->field_email['und'][0]['email']; ?></a>
 							</div>
 						<?php endforeach; ?>
 					<?php endif; ?>
