@@ -188,7 +188,7 @@ th {
 /*
  *
  * reset.less
- * 
+ *
  */
 * {
   -moz-box-sizing: border-box;
@@ -255,7 +255,7 @@ html {
   src: url('../font/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/ProximaNova-Regular.woff') format('woff'), /* Modern Browsers */ url('../font/ProximaNova-Regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('../font/ProximaNova-Regular.svg#2c1459d58560f08b4b0586fbe80aa4cd') format('svg');
   font-style: normal;
   font-weight: 400;
-  
+
   /* IE9 Compat Modes */
   /* Legacy iOS */
 }
@@ -265,7 +265,7 @@ html {
   src: url('../font/HaasGrotDisp-55Roman.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/HaasGrotDisp-55Roman.woff') format('woff'), /* Modern Browsers */ url('../font/HaasGrotDisp-55Roman.ttf') format('truetype'), /* Safari, Android, iOS */ url('../font/HaasGrotDisp-55Roman.svg#86185c79b9b4c147b8e7c55c045617e3') format('svg');
   font-style: normal;
   font-weight: 400;
-  
+
   /* IE9 Compat Modes */
   /* Legacy iOS */
 }
@@ -275,14 +275,14 @@ html {
   src: url('../font/HaasGrotDisp-75Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/HaasGrotDisp-75Bold.woff') format('woff'), /* Modern Browsers */ url('../font/HaasGrotDisp-75Bold.ttf') format('truetype'), /* Safari, Android, iOS */ url('../font/HaasGrotDisp-75Bold.svg#26a6ed2c438954131c0b98fe12a893c9') format('svg');
   font-style: normal;
   font-weight: 700;
-  
+
   /* IE9 Compat Modes */
   /* Legacy iOS */
 }
 /*
  *
  * mixins.less
- * 
+ *
  */
 /** clearfix - Source: http://nicolasgallagher.com/micro-clearfix-hack/ */
 /** Placeholder text */
@@ -291,7 +291,7 @@ html {
 /*
  *
  * miscellaneous.less
- * 
+ *
  */
 .clearfix:before,
 .clearfix:after,
@@ -3993,18 +3993,18 @@ Copyright (c) 2014 Daniel Eden
 Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
 */
 /*
-CONTENTS: 
-	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). 
-	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. 
+CONTENTS:
+	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited).
+	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar.
 	3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.
-	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. 
-	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. 
-	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS 
+	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars.
+	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars.
+	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS
 		6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.
 */
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-1. BASIC STYLE  
+1. BASIC STYLE
 ------------------------------------------------------------------------------------------------------------------------
 */
 .mCustomScrollbar {
@@ -4031,9 +4031,9 @@ CONTENTS:
   width: auto;
   height: auto;
 }
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-2. VERTICAL SCROLLBAR 
+2. VERTICAL SCROLLBAR
 y-axis
 ------------------------------------------------------------------------------------------------------------------------
 */
@@ -4139,9 +4139,9 @@ y-axis
 .mCSB_scrollTools .mCSB_buttonDown {
   bottom: 0;
 }
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-3. HORIZONTAL SCROLLBAR 
+3. HORIZONTAL SCROLLBAR
 x-axis
 ------------------------------------------------------------------------------------------------------------------------
 */
@@ -4216,10 +4216,10 @@ x-axis
 .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
   right: 0;
 }
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-4. VERTICAL AND HORIZONTAL SCROLLBARS 
-yx-axis 
+4. VERTICAL AND HORIZONTAL SCROLLBARS
+yx-axis
 ------------------------------------------------------------------------------------------------------------------------
 */
 .mCSB_container_wrapper {
@@ -4287,9 +4287,9 @@ yx-axis
 .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden {
   margin-bottom: 0;
 }
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-5. TRANSITIONS  
+5. TRANSITIONS
 ------------------------------------------------------------------------------------------------------------------------
 */
 .mCSB_scrollTools,
@@ -4312,14 +4312,14 @@ yx-axis
   -o-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
   transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
-/* 
+/*
 ------------------------------------------------------------------------------------------------------------------------
-6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  
+6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS
 ------------------------------------------------------------------------------------------------------------------------
 */
-/* 
+/*
 	----------------------------------------
-	6.1 THEMES 
+	6.1 THEMES
 	----------------------------------------
 	*/
 /* default theme ("light") */
@@ -4382,15 +4382,15 @@ yx-axis
 }
 .mCSB_scrollTools .mCSB_buttonUp {
   background-position: 0 0;
-  /* 
-		sprites locations 
+  /*
+		sprites locations
 		light: 0 0, -16px 0, -32px 0, -48px 0, 0 -72px, -16px -72px, -32px -72px
 		dark: -80px 0, -96px 0, -112px 0, -128px 0, -80px -72px, -96px -72px, -112px -72px
 		*/
 }
 .mCSB_scrollTools .mCSB_buttonDown {
   background-position: 0 -20px;
-  /* 
+  /*
 		sprites locations
 		light: 0 -20px, -16px -20px, -32px -20px, -48px -20px, 0 -92px, -16px -92px, -32px -92px
 		dark: -80px -20px, -96px -20px, -112px -20px, -128px -20px, -80px -92px, -96px -92px, -112 -92px
@@ -4398,16 +4398,16 @@ yx-axis
 }
 .mCSB_scrollTools .mCSB_buttonLeft {
   background-position: 0 -40px;
-  /* 
-		sprites locations 
+  /*
+		sprites locations
 		light: 0 -40px, -20px -40px, -40px -40px, -60px -40px, 0 -112px, -20px -112px, -40px -112px
 		dark: -80px -40px, -100px -40px, -120px -40px, -140px -40px, -80px -112px, -100px -112px, -120px -112px
 		*/
 }
 .mCSB_scrollTools .mCSB_buttonRight {
   background-position: 0 -56px;
-  /* 
-		sprites locations 
+  /*
+		sprites locations
 		light: 0 -56px, -20px -56px, -40px -56px, -60px -56px, 0 -128px, -20px -128px, -40px -128px
 		dark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100px -128px, -120px -128px
 		*/
@@ -5443,7 +5443,7 @@ yx-axis
   background-position: center top;
   background-repeat: no-repeat;
 }
-/* 
+/*
  * Style CSS
  * -------------------
  *
@@ -5469,7 +5469,7 @@ p {
   color: #919191;
 }
 /***********************
- *** 	LOADER E MENU 
+ *** 	LOADER E MENU
  ***********************/
 #loader {
   position: fixed;
@@ -5993,7 +5993,7 @@ p {
   background-color: #15a546;
 }
 /***********************
- *** 	STRUTTURA 
+ *** 	STRUTTURA
  ***********************/
 .curtains {
   width: 100%;
@@ -6083,7 +6083,7 @@ p {
   }
 }
 /***********************
- *** 	PAGINA HOME 
+ *** 	PAGINA HOME
  ***********************/
 .cover-home,
 .first {
@@ -6126,8 +6126,14 @@ p {
   font-size: 32px;
   line-height: 35px;
   margin-bottom: 10px;
-  padding-right: 25%;
+
 }
+
+.cover-home .home.no-bg-home,
+.first .home.no-bg-home {
+  background-color: #ffffff;
+}
+
 @media (min-width: 768px) {
   .cover-home .home,
   .first .home {
@@ -6152,6 +6158,7 @@ p {
     line-height: 65px;
   }
 }
+
 @media (min-width: 1200px) {
   .cover-home .home,
   .first .home {
@@ -6162,9 +6169,11 @@ p {
   .first .home h1 {
     font-size: 75px;
     line-height: 68px;
-    padding-right: 34%;
+
   }
 }
+
+
 @media (min-width: 1680px) {
   .cover-home .home,
   .first .home {
@@ -6175,13 +6184,11 @@ p {
   .first .home h1 {
     font-size: 80px;
     line-height: 72px;
-    padding-right: 35%;
+
   }
 }
-.cover-home .home.no-bg-home,
-.first .home.no-bg-home {
-  background-color: #ffffff;
-}
+
+
 @media (min-width: 992px) {
   .cover-home .home.background-first,
   .first .home.background-first {
@@ -6759,7 +6766,7 @@ p {
   height: 190px;
 }
 /***********************
- *** 	PAGINA WORKS 
+ *** 	PAGINA WORKS
  ***********************/
 .works .wrapper-grid-top {
   position: relative;
@@ -7286,7 +7293,7 @@ p {
   }
 }
 /***********************
- *** 	PAGINA CASE 
+ *** 	PAGINA CASE
  ***********************/
 .case-study-single h1,
 .single-case-study h1 {
