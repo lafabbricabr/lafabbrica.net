@@ -113,9 +113,9 @@ or
 
 6 - Execute yoururl / updates.php through the browser
 
-6.1 logue in to the panel 
+6.1 Login to the panel 
 
-6.2 get the default url with update.php, like this -> drupal7.dev/update.php
+6.2 Get the default url with update.php, like this -> drupal7.dev/update.php
 
 7 - Install php-xml
 
