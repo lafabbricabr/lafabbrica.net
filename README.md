@@ -70,15 +70,15 @@ $databases = array (
 
 ```
 
-5- Activate clean url
+5. Activate clean url
 
-5.1 - Enable the rewritten apache module
+5.1. - Enable the rewritten apache module
 
 ```
 # a2enmod rewrite
 ```
 
-5.2 Edit file /etc/apache2/sites-available/default to enable rewritable urls.
+5.2. Edit file /etc/apache2/sites-available/default to enable rewritable urls.
 
 ```
 nano /etc/apache2/sites-available/default ou .conf
@@ -101,7 +101,7 @@ Search the line with "Directory" using Ctrl+W or a similar command into your edi
  </Directory>
 ```
 
-5.3 - Restart apache
+5.3. - Restart apache
 ```
  /etc/init.d/apache2 restart
  ```
@@ -111,22 +111,22 @@ or
 # service apache2 restart
 ```
 
-6 - Execute yoururl / updates.php through the browser
+6. Execute yoururl / updates.php through the browser
 
-6.1 Login to the panel 
+6.1. Login to the panel 
 
-6.2 Get the default url with update.php, like this -> drupal7.dev/update.php
+6.2. Get the default url with update.php, like this -> drupal7.dev/update.php
 
-7 - Install php-xml
+7. Install php-xml
 
 ```
 apt-get install php7.0-xml
 ```
 
-8 - Install php-mbstring
+8. Install php-mbstring
 
 ```
 apt-get install php-mbstring
 ```
 
-9 - Looking for php.ini and activate the mbstring
+9. Looking for php.ini and activate the mbstring
