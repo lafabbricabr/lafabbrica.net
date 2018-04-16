@@ -122,6 +122,8 @@
         {
             //load: 'assets/js/app.js'
             load: '<?php echo base_path() . path_to_theme() ; ?>/assets/js/app.min.js'
+        },{
+            load: '<?php echo base_path() . path_to_theme() ; ?>/assets/js/custom.js'
         }
     ]);
 
