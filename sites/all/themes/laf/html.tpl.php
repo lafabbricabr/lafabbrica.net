@@ -27,6 +27,10 @@
     <link rel="dns-prefetch" href="//www.google-analytics.com">
 
     <?php print $styles; ?>
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_path() . path_to_theme() ; ?>/assets/css/expand.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_path() . path_to_theme() ; ?>/assets/css/custom.css">
+
     <?php print $scripts; ?>
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9AXMhZoWj7xf4F8nvWOykIRQUZFlk27o"></script>
@@ -122,8 +126,12 @@
         {
             //load: 'assets/js/app.js'
             load: '<?php echo base_path() . path_to_theme() ; ?>/assets/js/app.min.js'
-        },{
+        },
+        {
             load: '<?php echo base_path() . path_to_theme() ; ?>/assets/js/custom.js'
+        },
+        {
+            load: '<?php echo base_path() . path_to_theme() ; ?>/assets/js/expand.js'
         }
     ]);
 
