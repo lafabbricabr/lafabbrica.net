@@ -115,7 +115,7 @@
 				<div class="pager-chart"></div>
 			</div>
 
-			<div class="hidden-xs col-sm-12 col-lg-6 chart-data">
+<!-- 			<div class="hidden-xs col-sm-12 col-lg-6 chart-data">
 				<div class="chart" data-percent="<?php echo $content['field_percent_school']['#items'][0]['value']; ?>" data-bar-color="#15a546" data-animate="2000">
 					<div class="chart-content">
 						<div class="percent"></div>
@@ -135,8 +135,8 @@
 					</div>
 				</div>
 
-			</div>
-			<div class="col-sm-12 col-lg-6 experience-text">
+			</div> -->
+			<div class="col-sm-12 col-lg-10 experience-text">
 
 				<h4><?php print t('Experience'); ?></h4>
 				<p><?php echo $content['field_experience']['#items'][0]['value']; ?></p>

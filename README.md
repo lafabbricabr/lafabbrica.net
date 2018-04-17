@@ -1,14 +1,14 @@
 # Web Site La Fabbrica
 
+This is the current repository for lafabbrica.net's website (since 2015). We use it to process the modification in it.
+
 ## Core
-* Drupal
-
-## Modules
-
+* Drupal 7
 
 ## Development Enviroment
 
 ### Server Requirements
+How to deploy a developer enviroment?
 
 * Debian 9 or Ubuntu 16.04
 * Vagrant and vagrant-hostsupdater plugin
@@ -70,21 +70,21 @@ $databases = array (
 
 ```
 
-5- Ative as urls limpas
+5. Activate clean url
 
-5.1 - Habilite o módulo rewrite do apache;
+5.1. - Enable the rewritten apache module
 
 ```
 # a2enmod rewrite
 ```
 
-5.2 Edite o arquivo /etc/apache2/sites-available/default para habilitar a reescrita de URLs.
+5.2. Edit file /etc/apache2/sites-available/default to enable rewritable urls.
 
 ```
 nano /etc/apache2/sites-available/default ou .conf
 ```
 
-Procure a linha Directory usando Ctrl+W. Acrescente logo após allow from all as seguintes linhas, conforme abaixo:
+Search the line with "Directory" using Ctrl+W or a similar command into your editor. Put this lines after "allow from all":
 
 ```
  <Directory /var/www/>
@@ -101,30 +101,32 @@ Procure a linha Directory usando Ctrl+W. Acrescente logo após allow from all as
  </Directory>
 ```
 
-5.3 - Reinicie o apache com o comando
+5.3. - Restart apache
 ```
  /etc/init.d/apache2 restart
  ```
-ou
+or
 
 ```
 # service apache2 restart
 ```
 
-6 - Rode o updates.php
+6. Execute yoururl / updates.php through the browser
 
-6.1 logue no painel do site
-6.2 acesse pela url drupal7.dev/update.php
+6.1. Login to the panel 
 
-7 - Instale o php-xml
+6.2. Get the default url with update.php, like this -> drupal7.dev/update.php
+
+7. Install php-xml
 
 ```
 apt-get install php7.0-xml
 ```
 
-8 - Instale o php-mbstring
+8. Install php-mbstring
 
+```
 apt-get install php-mbstring
+```
 
-
-Progetti educativi di marca per ispirare le scelte di domani.
+9. Looking for php.ini and activate the mbstring
