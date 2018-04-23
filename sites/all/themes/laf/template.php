@@ -165,8 +165,6 @@ function laf_preprocess_page(&$variables)
 
     $pagePath = explode('/', drupal_lookup_path('alias', current_path()));
 
-    $variables['showSiiNostroPartner'] = true;
-
     /* Cerca pagina Note Legali */
     $result = db_query("
           SELECT n.nid FROM {node} n
@@ -231,6 +229,92 @@ function laf_preprocess_page(&$variables)
     if (isset($contattiPage)):
         $variables['contatti'] = $contattiPage;
     endif;
+
+    // Si nostro partner texts (Fornitore and Risorse Umane )
+    // Fornitore
+    $result = db_query("
+    SELECT n.nid FROM {node} n
+    WHERE n.status = :status
+    AND n.type = :type
+    AND n.language = :language", array(
+        ":status" => '1',
+        ":type" => "fornitore_text",
+        ":language" => $language->language
+    ));
+
+    $fornitore_id = $result->fetchAll();
+    foreach ($fornitore_id as $node)
+    {
+        $fornitorePage = node_load($node->nid);
+    }
+    if (isset($fornitorePage)):
+        $variables['fornitore_page'] = $fornitorePage;
+    endif;
+
+    // Risorse Umane
+    $result = db_query("
+    SELECT n.nid FROM {node} n
+    WHERE n.status = :status
+    AND n.type = :type
+    AND n.language = :language", array(
+        ":status" => '1',
+        ":type" => "risorse_umane_text",
+        ":language" => $language->language
+    ));
+
+    $risorse_id = $result->fetchAll();
+    foreach ($risorse_id as $node)
+    {
+        $risorsePage = node_load($node->nid);
+    }
+    if (isset($risorsePage)):
+        $variables['risorse_page'] = $risorsePage;
+    endif;
+
+    // only show if the two pages exists because the template (menu--partners.php)
+    // need the two parts
+    $showSiiNostroPartner = isset($fornitorePage) && isset($risorsePage);
+    $variables['showSiiNostroPartner'] = $showSiiNostroPartner;
+
+    if ($showSiiNostroPartner)
+    {
+        $nostro_partners__risorse_umane = [];
+        $nostro_partners__fornitore = [];
+
+        $result = db_query("
+            SELECT n.nid FROM {node} n
+            WHERE n.status = :status
+            AND n.type = :type
+            AND n.language = :language",
+            array(
+                ":status" => '1',
+                ":type" => "sii_nostro_partner",
+                ":language" => $language->language
+            )
+        );
+        $partners = node_load_multiple($result->fetchCol());
+
+        foreach ($partners as $partner) {
+            if ($partner->field_tipo_partner['it'][0]['value'] == 1) {
+                array_push($nostro_partners__risorse_umane, $partner);
+            } else {
+                array_push($nostro_partners__fornitore, $partner);
+            }
+        }
+        // echo '<-- AQUI RH';
+        // echo json_encode($nostro_partners__risorse_umane);
+        // echo '-->';
+        //
+        // echo '<-- AQUI fornitore';
+        // echo json_encode($nostro_partners__fornitore);
+        // echo '-->';
+
+        $variables['nostro_partners__risorse_umane'] = $nostro_partners__risorse_umane;
+        $variables['nostro_partners__fornitore'] = $nostro_partners__fornitore;
+
+
+
+    }
 
     /* Cerca le sedi */
     $sediVid = 3;

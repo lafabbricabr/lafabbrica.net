@@ -16,7 +16,7 @@
 
         $("#menu .close-page").on("click", function(a) {
             $(".panel-menu").removeClass("panel-page-partners");
-            $(".content-page-partners").hide();
+            // $(".content-page-partners").hide();
         });
 
     });
