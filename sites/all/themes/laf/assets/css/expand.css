@@ -3,16 +3,13 @@
 
 .strips {
   min-height: 100vh;
-  text-align: center;
-  overflow: hidden;
-  color: white; }
+  overflow: hidden; }
   .strips__strip {
     will-change: width, left, z-index, height;
     position: absolute;
     width: 50%;
     min-height: 100vh;
     overflow: hidden;
-    cursor: pointer;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
     .strips__strip:nth-child(1) {
       left: 0; }
@@ -20,22 +17,24 @@
         color: #24a650; }
       .strips__strip:nth-child(1) .strip__content {
         background: #FFF;
+        color: #000;
         transform: translate3d(-100%, 0, 0);
         animation-name: strip1;
         animation-delay: 0.1s; }
+        .strips__strip:nth-child(1) .strip__content p {
+          color: #000; }
     .strips__strip:nth-child(2) {
       left: 50vw; }
       .strips__strip:nth-child(2) .strip__title {
         color: #FFF; }
       .strips__strip:nth-child(2) .strip__content {
         background: #24a650;
+        color: #FFF;
         transform: translate3d(0, 100%, 0);
         animation-name: strip2;
         animation-delay: 0.2s; }
-    .strips__strip--expanded .strip__title {
-      color: #FFF !important; }
-    .strips__strip--expanded .strip__content {
-      background: #24a650 !important; }
+        .strips__strip:nth-child(2) .strip__content p {
+          color: #FFF; }
     @media screen and (max-width: 760px) {
       .strips__strip {
         min-height: 20vh; }
@@ -47,11 +46,12 @@
           top: 20vh;
           left: 0;
           width: 100%; } }
+  .strips .open-inner-text {
+    cursor: pointer; }
   .strips .strip__content {
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-    display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -59,20 +59,27 @@
     left: 0;
     width: 100%;
     height: 100%;
-    text-decoration: none; }
+    text-decoration: none;
+    z-index: 2;
+    padding: 10vh 5vw; }
+    .strips .strip__content h1, .strips .strip__content h2 {
+      margin-bottom: 5vh; }
+    .strips .strip__content ul {
+      padding: 0; }
+      .strips .strip__content ul > li {
+        list-style: none;
+        font-weight: bold;
+        line-height: 4vh; }
+    .strips .strip__content hr {
+      border: 0;
+      height: 1px;
+      background: #333;
+      background-image: linear-gradient(to right, #ccc, #333, #ccc);
+      width: 50vw;
+      margin: 3vh -5vw; }
     .strips .strip__content:hover:before {
       transform: skew(-30deg) scale(3) translate(0, 0);
       opacity: 0.1; }
-    .strips .strip__content:before {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: white;
-      opacity: 0.05; }
   .strips .strip__inner-text {
     will-change: transform, opacity;
     position: absolute;
@@ -83,10 +90,17 @@
     transform: translate(-50%, -50%) scale(0.5);
     opacity: 0;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
-    .strips .strip__inner-text p {
-      color: #FFF; }
+    .strips .strip__inner-text--expanded {
+      width: 100%;
+      background: #24a650;
+      color: #FFF;
+      padding: 10vh 10vw;
+      opacity: 1;
+      height: 100vh; }
+      .strips .strip__inner-text--expanded p {
+        color: #FFF !important;
+        line-height: 3vh; }
   .strips__strip--expanded {
-    background: #FFF;
     width: 100%;
     top: 0 !important;
     left: 0 !important;
@@ -95,35 +109,41 @@
     @media screen and (max-width: 760px) {
       .strips__strip--expanded {
         min-height: 100vh; } }
-    .strips__strip--expanded .strip__title {
-      opacity: 0; }
     .strips__strip--expanded .strip__inner-text {
-      opacity: 1;
       transform: translate(-50%, -50%) scale(1); }
 
 .strip__title {
-  display: block;
-  margin: 0;
-  position: relative;
-  z-index: 2;
-  width: 100%;
   font-size: 3.5vw;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
   @media screen and (max-width: 760px) {
     .strip__title {
       font-size: 28px; } }
 
-.strip__close {
+.strip__close, .strip__close--all {
   position: absolute;
-  right: 3vw;
-  top: 3vw;
   opacity: 0;
-  z-index: 10;
+  z-index: 0;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: pointer;
   transition-delay: 0.5s; }
-  .strip__close--show {
-    opacity: 1; }
+
+.strip__close--show {
+  opacity: 1;
+  z-index: 4; }
+.strip__close--all {
+  opacity: 1;
+  z-index: 1; }
+
+.ex-icon-close {
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-indent: -9999px;
+  background-image: url(../img/icon-close.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  top: 78px; }
 
 @keyframes strip1 {
   0% {
