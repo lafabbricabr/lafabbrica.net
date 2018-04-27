@@ -85,6 +85,10 @@ $color2: #24a650;
   cursor: pointer;
 }
 
+.no-partners-text{
+  font-weight: bold;
+}
+
 .strip__content {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -103,6 +107,10 @@ $color2: #24a650;
 
   h1, h2{
     margin-bottom: 5vh;
+  }
+
+  a {
+    color: #000;
   }
 
   ul{

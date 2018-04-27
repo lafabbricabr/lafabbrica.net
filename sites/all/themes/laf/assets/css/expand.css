@@ -48,6 +48,8 @@
           width: 100%; } }
   .strips .open-inner-text {
     cursor: pointer; }
+  .strips .no-partners-text {
+    font-weight: bold; }
   .strips .strip__content {
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -64,6 +66,8 @@
     padding: 10vh 5vw; }
     .strips .strip__content h1, .strips .strip__content h2 {
       margin-bottom: 5vh; }
+    .strips .strip__content a {
+      color: #000; }
     .strips .strip__content ul {
       padding: 0; }
       .strips .strip__content ul > li {

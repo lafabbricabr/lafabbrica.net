@@ -8,7 +8,9 @@
                 <h1 class="strip__title" data-name="<?php echo $risorse_page->title; ?>"><?php echo $risorse_page->title; ?></h1>
                 <p><?php echo $risorse_page->body['und'][0]['value']; ?></p>
                 <?php if(!$nostro_partners__risorse_umane) {?>
-                    <p>Nenhuma vaga em aberto no momento</p>
+                    <div class="no-partners-text">
+                        <?php echo $risorse_page->field_no_partners_text; ?>">
+                    </div>
                 <?php } else { ?>
                     <ul>
                         <?php foreach ($nostro_partners__risorse_umane as $risorse_umane) { ?>
@@ -25,8 +27,8 @@
                     <?php } ?>
                 <?php } ?>
                 <hr />
-                <h3>Banco de Currículos</h3>
-                <p>Não encontrou oportunidades de trabalho? Envie seu curriculum para lorem@ipsum.com para oportunidades futuras</p>
+                <h2><?php echo $risorse_page->field_resume_bank_title['und'][0]['value'] ?></h2>
+                <?php echo $risorse_page->field_resume_bank_text['und'][0]['value'] ?>
             </div>
         </article>
         <article class="strips__strip">
@@ -34,7 +36,9 @@
                 <h1 class="strip__title" data-name="<?php echo $fornitore_page->title; ?>"><?php echo $fornitore_page->title; ?></h1>
                 <p><?php echo $fornitore_page->body['und'][0]['value']; ?></p>
                 <?php if(!$nostro_partners__fornitore) {?>
-                    <p>Nenhum edital em aberto no momento</p>
+                    <div class="no-partners-text">
+                        <?php echo $risorse_page->field_no_partners_text['und'][0]['value']; ?>">
+                    </div>
                 <?php } else { ?>
                     <ul>
                         <?php foreach ($nostro_partners__fornitore as $fornitore) { ?>

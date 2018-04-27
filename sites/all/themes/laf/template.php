@@ -276,6 +276,7 @@ function laf_preprocess_page(&$variables)
     $showSiiNostroPartner = isset($fornitorePage) && isset($risorsePage);
     $variables['showSiiNostroPartner'] = $showSiiNostroPartner;
 
+
     if ($showSiiNostroPartner)
     {
         $nostro_partners__risorse_umane = array();
@@ -301,13 +302,6 @@ function laf_preprocess_page(&$variables)
                 array_push($nostro_partners__fornitore, $partner);
             }
         }
-        // echo '<-- AQUI RH';
-        // echo json_encode($nostro_partners__risorse_umane);
-        // echo '-->';
-        //
-        // echo '<-- AQUI fornitore';
-        // echo json_encode($nostro_partners__fornitore);
-        // echo '-->';
 
         $variables['nostro_partners__risorse_umane'] = $nostro_partners__risorse_umane;
         $variables['nostro_partners__fornitore'] = $nostro_partners__fornitore;
