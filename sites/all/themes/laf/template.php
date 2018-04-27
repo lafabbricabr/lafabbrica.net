@@ -278,8 +278,8 @@ function laf_preprocess_page(&$variables)
 
     if ($showSiiNostroPartner)
     {
-        $nostro_partners__risorse_umane = [];
-        $nostro_partners__fornitore = [];
+        $nostro_partners__risorse_umane = array();
+        $nostro_partners__fornitore = array();
 
         $result = db_query("
             SELECT n.nid FROM {node} n
