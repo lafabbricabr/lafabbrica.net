@@ -33,7 +33,7 @@
 
     <?php print $scripts; ?>
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9AXMhZoWj7xf4F8nvWOykIRQUZFlk27o"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6c5Q_AMIKwmlLkE3KxorpJkQjgsL_qnQ"></script>
 
     <!--[if lte IE 8]>
     <script>
